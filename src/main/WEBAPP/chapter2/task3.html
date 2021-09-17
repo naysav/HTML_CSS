@@ -1,0 +1,72 @@
+<!--Задание 3-->
+<!--Создайте страницу, на которой будет размещена таблица из шаблона в материалах.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+    <style>
+        table {
+            border-color: black; /* Цвет границы */
+            border-style: solid; /* Стиль границы */
+            margin: auto; /* Выравниваем таблицу по центру окна  */
+        }
+        td {
+            border: 3px black solid; /* стиль рамки ячеек */
+        }
+        th {
+            border: 3px black solid; /* стиль рамки заголовков */
+        }
+
+    </style>
+</head>
+<!--border="5"-->
+<body>
+    <table width="864" height="178">
+        <!--1 строка таблицы-->
+        <tr>
+            <td colspan="2" rowspan="2"></td>
+            <td rowspan="4"></td>
+            <th colspan="4"></th>
+        </tr>
+        <!--2 строка таблицы-->
+        <tr>
+            <td></td>
+            <td colspan="3"></td>
+        </tr>
+        <!--3 строка таблицы-->
+        <tr>
+            <td></td>
+            <td rowspan="2"></td>
+            <td colspan="2"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <!--4 строка таблицы-->
+        <tr>
+            <td rowspan="2"></td>
+            <td colspan="2"></td>
+            <td rowspan="3"></td>
+            <td></td>
+        </tr>
+        <!--5 строка таблицы-->
+        <tr>
+            <td colspan="2"></td>
+            <td rowspan="2"></td>
+            <td></td>
+            <td rowspan="2"></td>
+        </tr>
+        <!--6 строка таблицы-->
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+
+    </table>
+</body>
+
+</html>
