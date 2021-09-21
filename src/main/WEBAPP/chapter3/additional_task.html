@@ -1,0 +1,32 @@
+<!--Задание-->
+<!--Создайте HTML страницу, на которой, разместите 3 параграфа. Первому параграфу задайте inline стили,-->
+<!--цвет и рамку, второму параграфу задайте такие же стили с помощью глобальных стилей, и третьему-->
+<!--задайте стили во внешнем файле.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Дополнительное задание</title>
+    <style>
+        p.style {
+            border: 5px inset gray;
+            background-color: orangered;
+            padding: 5px;
+            width: 250px;
+            height: 122px;
+        }
+    </style>
+    <link href="my_style.css" rel="stylesheet" />
+</head>
+<body>
+    <p  style="border: 5px inset gray;
+        background-color: orangered;
+        padding: 5px;
+        width: 250px;
+        height: 122px;"> inline
+    </p>
+    <p class="style">global</p>
+    <p class="my_style">outer</p>
+</body>
+</html>

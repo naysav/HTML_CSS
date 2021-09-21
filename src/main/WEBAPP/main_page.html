@@ -6,36 +6,74 @@
 <!-- head содержит инф-цию о страницу (метатеги, ссылки на подлючаемые модули)-->
 <head>
     <meta charset="UTF-8">
-    <div>
-        <title class="editor-note">Главная страница</title>
-    </div>
+    <title class="editor-note">Главная страница</title>
+    <style>
+        .layer {
+            text-align: center;
+        }
+        .btn-group .button {
+            background-color: #FF6347; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 20px;
+            cursor: pointer;
+            float: left;
+        }
+        .btn-group .button:hover {
+            background-color: #FF4500;
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
 
 <!-- body - контейнер для отображаемого пользователю содержимого -->
 <body>
-    <h1>Ход изучения HTML5/CSS3</h1>
+    <div>
+        <h1 class="layer">Ход изучения HTML5/CSS3</h1>
 
-    <h2>Тема 1</h2>
+        <h2>Тема 1</h2>
+        <div class="btn-group">
+            <button class="button"><a href="сhapter1/task2.html">Задание 2</a></button>
+            <button class="button"><a href="сhapter1/task3.html">Задание 3</a></button>
+            <button class="button"><a href="сhapter1/task4.html">Задание 4</a></button>
+            <button class="button"><a href="сhapter1/additional_task.html">Дополнительное задание</a></button>
+        </div>
+        <p style="clear:both"><br/></p>
 
-    <p><a href="сhapter1/task2.html">Задание 2</a></p>
+        <div><h2>Тема 2</h2></div>
+        <div class="btn-group">
+            <button class="button"><a href="chapter2/task2.1.html">Задание 2.1</a></button>
+            <button class="button"><a href="chapter2/task2.2.html">Задание 2.2</a></button>
+            <button class="button"><a href="chapter2/task3.html">Задание 3</a></button>
+            <button class="button"><a href="chapter2/task4.html">Задание 4</a></button>
+            <button class="button"><a href="chapter2/additional_task.html">Дополнительное задание</a></button>
+        </div>
+        <p style="clear:both"><br/></p>
 
-    <p><a href="сhapter1/task3.html">Задание 3</a></p>
+        <h2>Тема 3</h2>
+        <div class="btn-group">
+            <button class="button"><a href="chapter3/task2.html">Задание 2</a></button>
+            <button class="button"><a href="chapter3/task3.html">Задание 3</a></button>
+            <button class="button"><a href="chapter3/task4.html">Задание 4</a></button>
+            <button class="button"><a href="chapter3/additional_task.html">Дополнительное задание</a></button>
+        </div>
+        <p style="clear:both"><br/></p>
 
-    <p><a href="сhapter1/task4.html">Задание 4</a></p>
+        <h2>Тема 4</h2>
 
-    <p><a href="сhapter1/additional_task.html">Дополнительное задание</a></p>
-
-    <h2>Тема 2</h2>
-
-    <p><a href="chapter2/task2.1.html">Задание 2.1</a></p>
-    <p><a href="chapter2/task2.2.html">Задание 2.2</a></p>
-
-    <p><a href="chapter2/task3.html">Задание 3</a></p>
-
-    <p><a href="chapter2/task4.html">Задание 4</a></p>
-
-    <p><a href="chapter2/additional_task.html">Дополнительное задание</a></p>
-
+        <div class="btn-group">
+            <button class="button"><a href="chapter4/task2.html">Задание 2</a></button>
+            <button class="button"><a href="chapter4/additional_task.html">Дополнительное задание</a></button>
+        </div>
+        <p style="clear:both"><br/></p>
+    </div>
 </body>
 
 </html>

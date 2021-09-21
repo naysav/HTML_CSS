@@ -1,0 +1,52 @@
+<!--Задание 4-->
+<!--Создайте 5-6 параграфом, которым задайте фон, разными способами. Одному из параграфов задайте в-->
+<!--качестве фона изображение, поэкспериментируйте с заданием фона используя шестнадцатеричный код-->
+<!--цвета, имя цвета и функцию rgba.-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 4</title>
+    <style>
+        p{
+            text-align: center;
+        }
+        p.double{
+            border: 15px double darkgreen;
+            padding: 5px;
+            background-color: #4CAF50;
+        }
+        p.groove{
+            border: 15px groove chocolate;
+            padding: 5px;
+            background-color: orange;
+        }
+        p.ridge{
+            border: 15px ridge brown;
+            padding: 5px;
+            background-color: #11ffeef0; /*f0 - альфа-канал (прозрачность)*/
+        }
+        p.inset{
+            border: 15px inset blue;
+            padding: 5px;
+            background-image: url(img/cbs.png);
+            background-size: contain;
+        }
+        p.outset {
+            border: 15px outset black;
+            padding: 5px;
+            background-color: rgba(117, 190, 218, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <p class="double">double with green background</p>
+    <p class="groove">groove with orange background</p>
+    <p class="ridge">ridge</p>
+    <p class="inset">inset</p>
+    <p class="outset">outset</p>
+</body>
+</html>

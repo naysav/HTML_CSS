@@ -1,0 +1,7 @@
+p.my_style {
+    border: 5px inset gray;
+    background-color: orangered;
+    padding: 5px;
+    width: 250px;
+    height: 122px;
+}

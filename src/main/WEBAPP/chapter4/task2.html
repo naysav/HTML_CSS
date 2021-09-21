@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 2</title>
+    <style>
+        /* ПСЕВДОКЛАССЫ ДЛЯ ССЫЛОК */
+        /* :link - задает стили для не посещенной ссылки. */
+        a:link {
+            color: #497DDD;
+        }
+        /* :visited - задает стили для ссылки, по которой уже выполнялся переход. */
+        a:visited {
+            color: #EF7D55;
+        }
+        /* :hover - задает стили для элемента, когда на него наводят курсор. Действует не только для ссылок. */
+        a:hover {
+            color: #154088;
+        }
+        /* :active - задает стили для ссылки на которой удерживается нажатый курсор. */
+        a:active {
+            color: #497DDD;
+        }
+
+        td {
+            height: 125px;
+            width: 250px;
+        }
+        td:empty {
+            background-color: red;
+        }
+
+        /* Псевдокласс :first-child устанавливает стилевое оформление к первому дочернему элементу своего родителя.  */
+        li:first-child{
+            background-color: yellow;
+        }
+        /* Псевдокласс :last-child устанавливает стилевое оформление к последнему дочернему элементу своего родителя. CSS3. */
+        li:last-child {
+            background-color: red;
+        }
+
+        span{
+            color: deeppink;
+        }
+        /* Псевдокласс :not позволяет задать стили для элементов, которые не содержат указанный селектор. CSS3. */
+        :not(span){
+            color: black;
+        }
+
+        /* Псевдокласс :nth-child используется для добавления стиля к элементам на основе нумерации в дереве элементов. CSS3. */
+        /* все нечетные параграфы */
+        sup:nth-child(odd) { background-color: green; }
+        /* все четные параграфы */
+        sup:nth-child(even) { background-color: red; }
+
+        /* получить шестой элемент */
+        p.NTH:nth-child(3) {
+            background-color: red;
+        }
+        /*
+        n - счетчик, который постоянно увеличивается на 1 начиная со значения 0.
+        3 * 0 + 1 = 1
+        3 * 1 + 1 = 4
+        3 * 2 + 1 = 7
+        3 * 3 + 1 = 10
+        правило используется для элементов с порядковым номером 1, 4, 7, 10*/
+        p.NTH:nth-child(3n+1) {
+            background-color: yellow;
+        }
+        /* 2, 5, 8*/
+        p.NTH:nth-child(3n+2) {
+            background-color: orange;
+        }
+
+        /* nth-last-child - то же что и nth-child но обход элементов начинается с последнего */
+        pre:nth-last-child(4) {
+            background: red;
+        }
+        pre:nth-last-child(1) {
+            background: green;
+        }
+
+        /* Псевдокласс :nth-of-type используется для добавления стиля к элементам указанного типа на основе нумерации в дереве элементов. CSS3. */
+        /* второй параграф в одном родительском контейнера*/
+        #id1 p:nth-of-type(2) {
+            background: purple;
+        }
+        /* второй элемент в одном контейнере который является параграфом */
+        #id2 p:nth-child(2) {
+            background: blue;
+        }
+
+        /* правило для параграфов, которые являются единственным дочерним элементом. CSS3. */
+        p.OL:only-child {
+            background: dimgrey;
+        }
+
+        /* Псевдокласс :only-of-type применяется к дочернему элементу указанного типа, только если он единственный у родителя. CSS3 */
+        p.OL:only-of-type {
+            border: 5px double red;
+        }
+
+        /* Псевдоэлемент after позволяет динамически генерировать контент и вставлять после содержимого элемента. */
+        p::after {
+            /* Свойство content содержит значение которое необходимо динамически встаивть */
+            content: ' |||';
+        }
+
+        pre::before {
+            content: "";
+            display: inline-block;
+            width: 7px;
+            height: 7px;
+            background-color: slategray;
+            margin-right: 7px;
+        }
+
+        /* Псевдоэлемент first-letter позволяет задать стиль первого символа в тексте элемента. CSS3. */
+        p.FL::first-letter{
+            font-size: 18pt;
+            color: red;
+        }
+
+        /* Псевдоэлемент first-line позволяет задать стиль первой строки текста внутри элемента. CSS3 */
+        p::first-line{
+            color: rebeccapurple;
+        }
+        /* Псевдоэлемент selection позволяет задать стили к выделенному пользователем тексту. Допускается использовать следующие свойства: olor, background и background-color. */
+        .select::selection{
+            background-color:black;
+            color: yellow;
+        }
+    </style>
+</head>
+<body>
+
+
+    <table border="1">
+        <tr>
+            <td colspan="3"><a href="../main_page.html">Главная страница</a> - к этой ссылке применено 4 псевдокласса</td>
+        </tr>
+        <tr>
+            <td>
+                first-child, last-child
+                <ol>
+                    <li>Груша</li>
+                    <li>Яблоко</li>
+                    <li>Помидор</li>
+                </ol>
+            </td>
+            <td></td>
+            <td><p class="FL"><span>Здесь применен span</span>, а здесь уже нет (:not(span))</p></td>
+        </tr>
+        <tr>
+            <td>
+                <sup>first</sup>
+                <sup>second</sup>
+                <sup>third</sup>
+                <sup>fourth</sup>
+            </td>
+            <td>
+                <p class="NTH">1 - nth-child(3n+1)</p>
+                <p class="NTH">2 - nth-child(3n+2)</p>
+                <p class="NTH">3 - nth-child(3)</p>
+                <p class="NTH">4 - nth-child(3n+1)</p>
+                <p class="NTH">5 - nth-child(3n+2)</p>
+            </td>
+            <td>
+                <pre>1 - pre:nth-last-child(4)</pre>
+                <pre>2</pre>
+                <pre>3</pre>
+                <pre>4 - pre:nth-last-child(1)</pre>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            <div id="id1">
+                <h1>1 div</h1>
+                <p>1</p>
+                <p>2 - p:nth-of-type(2)</p> <!--p:nth-of-type(2)-->
+                <p>3</p>
+            </div>
+            <div id="id2">
+                <h1>2 div</h1>
+                <p>1 - p:nth-child(2)</p>
+                <p>2</p>
+            </div>
+            </td>
+            <td>
+                <p class="OL">1 - p:only-of-type & p:only-child</p>
+            </td>
+            <td>
+                <p class="select">CSS-ссылки содержат свойства, которые отвечают за внешний вид гипертекстовых ссылок HTML-документа. Ссылки представляют
+                    собой основной способ навигации по сайту, поэтому применение CSS-стилей для оформления улучшит их визуальное восприятие.</p>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
