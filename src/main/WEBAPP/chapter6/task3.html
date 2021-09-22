@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Задание 3</title>
+</head>
+<body>
+    <!--
+    Тег video используется для добавления видео контента на веб-станицу.
+    Имеет те же атрибуты что и тег audio, и несколько дополнительных:
+        - height - задает высоту окна для отображения видеоданных.
+        - poster - позволяет задать путь к изображению, которое будет отображаться до воспроизведения видеофайла.
+        - width - задает ширину окна для отображения видеоданных.
+    -->
+    <video style="display:block; margin: 0 auto;" controls loop poster="video/img/poster.jpg" width="1000">
+        <source src="video/lo-fi.mp4" />
+        <source src="video/lo-fi.webm" />
+        <source src="video/lo-fi.264" />
+    </video>
+</body>
+</html>
